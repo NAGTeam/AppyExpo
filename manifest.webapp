@@ -1,0 +1,15 @@
+{
+    "name": "AppyExpo",
+    "description": "expo news app",
+    "version": "1.0",
+    "developer": {
+        "name": "nag"
+    },
+    "launch_path": "/index.html",
+    "type": "privileged",
+    "permissions": {
+        "systemXHR": {
+            "description": "Used to retrive trains data from mobile.viaggiatreno.it and italotreno.it"
+        }
+    }
+}

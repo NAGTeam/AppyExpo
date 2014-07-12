@@ -13,6 +13,9 @@ function sendRequest(){
             console.log(response);
             responseDoc=$.parseXML(response);
             $response=$(responseDoc);
+
+            news = $response.find('h2').text();
+            console.log(news);
         }  
     };
 }

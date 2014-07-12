@@ -1,7 +1,6 @@
 var list;
 
 $(document).ready(function(){
-    list = document.getElementById('res_list');
     sendRequest();
 });
 
@@ -17,7 +16,7 @@ function sendRequest(){
 
     request.onreadystatechange=function(){
         if(request.status === 200 && request.readyState === 4){
-            list.innerHTML='';
+            list='';
             var items = request.responseXML.querySelectorAll('item');
             items = Array.prototype.slice.call(items,0);
             items.forEach(function(item) {
@@ -26,9 +25,11 @@ function sendRequest(){
                 var link = item.getElementsByTagName('link')[0].textContent;
                 var date = item.getElementsByTagName('pubDate')[0].textContent;
 
-                var listItem = '<li><a href="'+link+'"><p class="title">'+title+'</p><p class="description">'+description+'</p><p class="date">'+date+'</p>';
-                list.innerHTML = list.innerHTML + listItem;
+                var listItem = '<li><a href="'+link+'"><p class="title">'+title+'</p><p class="description">'+description+'</p><p class="date">'+date+'</p></li>';
+                list = list + listItem;
+                console.log(list);
             })
+            $('#res_list').append(list);
         }
     };
     request.send();

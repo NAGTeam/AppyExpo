@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+
+  <!-- http://www.youtube.com/watch?v=09zBftEqBN0 -->
+
+  <!-- First rule of Coding Style is: you don't talk about it. -->
+  <style>
+  #the_wrap li {
+    font-family: tahoma;
+    font-size: 10pt;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-bottom: 0.4rem;
+    color: black;
+    text-decoration: none;
+  }
+
+  #the_wrap a {
+    text-decoration: none;
+    color: black;
+  }
+  </style>
+
+  <!-- Linking jquery, bitch! -->
+  <script src="script/jquery-2.1.0.min.js"></script>
+
+</head>
+<body>
+
+  <div id="the_wrap">
+    <ul>
+      <!-- jeez!!, content is going to be wrapped here!! -->
+    </ul>
+  </div>
+
+<script>
+  // See the terrific answer to "How to parse a RSS feed using javascript"
+  // on stackoverflow.com
+  var FEED_URL = "http://www.expo2015.org/en/rss.xml";
+  $.ajax({
+    url : "http://ajax.googleapis.com/ajax/services/feed/load"
+      + "?v=1.0&num=10&callback=?&q=" + encodeURIComponent(FEED_URL),
+    dataType : "json",
+    success : function (data) {
+      if (data.responseData.feed && data.responseData.feed.entries) {
+        $.each(data.responseData.feed.entries, function (i, e) {
+          tmp_str = "<li><a href=\"" + e.link + "\">";
+          tmp_str += e.title + "</a></li>";
+          $("#the_wrap ul").append(tmp_str);
+        });
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+<!--
+    vim: set tabstop=2 shiftwidth=2 softtabstop=2 expandtab:
+-->

@@ -25,7 +25,7 @@ function sendRequest(){
                 var link = item.getElementsByTagName('link')[0].textContent;
                 var date = item.getElementsByTagName('pubDate')[0].textContent;
 
-                var listItem = '<li><a href="'+link+'"><p class="title">'+title+'</p><p class="description">'+description+'</p><p class="date">'+date+'</p></li>';
+                var listItem = '<li><a href="'+link+'"><header>'+title+'</header><p class="description_date">'+description+date+'</p></a></li>';
                 list = list + listItem;
                 console.log(list);
             })

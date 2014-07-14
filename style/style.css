@@ -1,0 +1,56 @@
+body{
+	margin:0;
+}
+
+p, li {
+	margin-left: 4%;
+	margin-right: 4%;
+    font-size: 0.8rem;
+}
+
+[data-type="list"] .description_date {
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+#submit{
+	padding:1.5rem;
+	color:white;
+	margin-left:10%;
+	margin-right:10%;
+}
+
+#about_page{
+	padding:0 0.4rem;
+}
+
+/*Color Adjust*/
+
+.borderBlue{
+	border-bottom: 0.1rem solid #2574a9;
+}
+
+.colorBlue{
+	color: #2574a9;
+	background: #2574a9;
+	background-color: #2574a9;
+}
+
+.listheaderBlue{
+	color: #2574a9;
+}
+
+.linkBlue:hover{
+	background-color: #1e8bc3;
+}
+
+.buttonBlue{
+	background-color:#59abe3;
+	border:1px solid #3498db;
+	color:white;
+}

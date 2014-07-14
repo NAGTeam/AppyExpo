@@ -1,18 +1,14 @@
 /* ----------------------------------
  * HEADERS: default
  * ---------------------------------- */
-.top-menu:first-child {
+.top-menu{
   position: relative;
   z-index: 10;
   padding: 0;
-  height: 3.5rem;
+  height: 3rem;
   color: #fff;
   border: none;
   width:100%;
-}
-
-body{
-	margin:0;
 }
 
 .top-menu:first-child h1 {
@@ -26,7 +22,6 @@ body{
   overflow: visible;
   margin: 0;
   padding: 0;
-  height: 100%;
   font-weight: lighter;
 }
 

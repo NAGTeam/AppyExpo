@@ -2,6 +2,17 @@ var list;
 
 $(document).ready(function(){
     sendRequest();
+
+    $(document).on('click',".news", function(){
+		var link = this.getAttribute("id");
+		new MozActivity({
+			name: "view",
+			data: {
+				type: "url",
+				url: link
+			}
+		});
+	});
 });
 
 function sendRequest(){
@@ -25,7 +36,7 @@ function sendRequest(){
                 var link = item.getElementsByTagName('link')[0].textContent;
                 var date = item.getElementsByTagName('pubDate')[0].textContent;
 
-                var listItem = '<li><a href="'+link+'"><header>'+title+'</header><p class="description_date">'+description+date+'</p></a></li>';
+                var listItem = '<li><a href=# class="news" id="'+link+'"><header>'+title+'</header><p class="description_date">'+description+date+'</p></a></li>';
                 list = list + listItem;
                 console.log(list);
             })

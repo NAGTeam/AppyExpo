@@ -23,7 +23,7 @@ body{
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
-  overflow: hidden;
+  overflow: visible;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -39,7 +39,7 @@ body{
 
 .top-menu:first-child form {
   display: block;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   padding: 1rem 1rem 0 0.5rem ;
   margin-left: 3.5rem;

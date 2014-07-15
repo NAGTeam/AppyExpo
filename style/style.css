@@ -72,3 +72,11 @@ menu[type="toolbar"] > button {
     height: 80%;
     width: 80%;
 }
+
+[data-type="list"] {
+    text-align: center;
+}
+
+[data-type="list"] > p {
+    font-size: 1.3rem;
+}

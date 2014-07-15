@@ -22,7 +22,7 @@
   overflow: visible;
   margin: 0;
   padding: 0;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 .top-menu:first-child h1 em {

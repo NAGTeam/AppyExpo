@@ -18,6 +18,15 @@ $(document).ready(function(){
         sendRequest();
         console.log("reloading...");
     });
+
+	$(document).on('click','#btn_about', function() {
+        goToCard(1);
+    });
+
+    $(document).on('click','#btn_home', function() {
+        console.log("back to home");
+        goToCard(0);
+    });
 });
 
 function sendRequest(){
@@ -48,4 +57,8 @@ function sendRequest(){
         }
     };
     request.send();
+}
+
+function goToCard(cardNum){
+	document.querySelector('x-deck').showCard(cardNum);
 }

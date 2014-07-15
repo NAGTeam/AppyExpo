@@ -5,12 +5,13 @@
 	
   font-weight: 400;
 	
-  padding: 0;
+  padding: 3.5rem 0;
 	
   overflow:scroll;
 
   font-size: 0.5rem;
 
+  z-index: -1;
 }
 
 
@@ -37,8 +38,7 @@
 	
   font-size: 1.4rem;
 	
-	width:99%;
-	
+  width:99%;
 
 }
 

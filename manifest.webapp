@@ -2,6 +2,7 @@
     "name": "AppyExpo",
     "description": "expo news app",
     "version": "1.0",
+    "orientation": "portrait",
     "developer": {
         "name": "nag"
     },
@@ -11,5 +12,10 @@
         "systemXHR": {
             "description": "Used to retrive news from websites"
         }
+    },
+    "icons": {
+        "60": "/style/icons/icon_60.png",
+        "90": "/style/icons/icon_90.png",
+        "120": "/style/icons/icon_120.png"
     }
 }

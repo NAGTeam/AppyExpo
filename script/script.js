@@ -13,6 +13,11 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+    $(document).on('click',"#reload", function(){
+        sendRequest();
+        console.log("reloading...");
+    });
 });
 
 function sendRequest(){
@@ -38,7 +43,6 @@ function sendRequest(){
 
                 var listItem = '<li><a href=# class="news" id="'+link+'"><header>'+title+'</header><p class="description_date">'+description+date+'</p></a></li>';
                 list = list + listItem;
-                console.log(list);
             })
             $('#res_list').append(list);
         }

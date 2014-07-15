@@ -62,7 +62,7 @@
   top: 1rem;
   bottom: 0;
   width: 3rem;
-  height: auto;
+  height: 3rem;
   margin: 0;
   display: none;
   border: none;
@@ -84,7 +84,7 @@
   -moz-box-sizing: border-box;
   position: relative;
   float: left;
-  width: 3rem;
+  width: 3.5rem;
   height: 3.5rem;
   margin-bottom: 0;
   padding: 0;
@@ -227,7 +227,7 @@
 .top-menu:first-child > button,
 .top-menu:first-child > a {
   position: relative;
-  width: 3rem;
+  width: 3.5rem;
   height: 3.5rem;
   background: none;
   float: left;
@@ -242,7 +242,7 @@
   left: 0;
   top: 0;
   z-index: -1;
-  width: 3rem;
+  width: 3.5rem;
   height: 3.5rem;
 }
 

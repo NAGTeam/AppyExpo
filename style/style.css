@@ -60,6 +60,15 @@ a {
 }
 
 #logo {
-    width: 70%;
-    padding: 0.3rem 0rem;
+    width: 60%;
+    padding: 0.5rem 0.9rem;
+}
+
+#header {
+    z-index: 10;
+}
+
+menu[type="toolbar"] > button {
+    height: 80%;
+    width: 80%;
 }

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style/style.css"/>
     <link rel="stylesheet" href="style/headers.css"/>
     <link rel="stylesheet" href="style/lists.css"/>
+    <link href="style/icons/media_icons.css" rel="stylesheet" type="text/css"/>
+    <link href="style/icons/settings_icons.css" rel="stylesheet" type="text/css"/>
     
     <script src='script/brick-1.0.1.js'></script>
     <script src='script/jquery-2.1.0.min.js'></script>
@@ -16,10 +18,10 @@
     <x-deck>
         <x-card selected transition='show'>
             <x-layout>
-                <header class="top-menu colorBlue">
-                    <button><!--bottone "reload"--></button>
+                <header class="top-menu colorBlue" id="header">
+                    <button class="settings-icon updateBalance" id="reload"></button>
                     <menu type="toolbar">
-                        <button><!--bottone "about"--></button>
+                        <button class="settings-icon aboutphone"><!--bottone "about"--></button>
                     </menu>
                     <img id="logo" src="style/headers/images/icons/logo.png"/>
                 </header>

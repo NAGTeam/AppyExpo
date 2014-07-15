@@ -87,3 +87,8 @@ section > header {
 #about_sec > p {
     font-size: 1rem;
 }
+
+.link {
+	color:#3498db;
+	text-decoration: underline;
+}

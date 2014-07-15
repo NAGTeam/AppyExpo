@@ -14,6 +14,36 @@ $(document).ready(function(){
 		});
 	});
 
+    $(document).on('click',"#git_project", function(){
+		new MozActivity({
+			name: "view",
+			data: {
+				type: "url",
+				url: "http://github.com/nag-motherfuckers/AppyExpo"
+			}
+		});
+	});
+
+    $(document).on('click',"#aro94", function(){
+		new MozActivity({
+			name: "view",
+			data: {
+				type: "url",
+				url: "http://twitter.com/aro94"
+			}
+		});
+	});
+
+    $(document).on('click',"#nicokant", function(){
+		new MozActivity({
+			name: "view",
+			data: {
+				type: "url",
+				url: "http://twitter.com/nicokant"
+			}
+		});
+	});
+
     $(document).on('click',"#reload", function(){
         sendRequest();
         console.log("reloading...");

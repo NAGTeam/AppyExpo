@@ -44,6 +44,16 @@ $(document).ready(function(){
 		});
 	});
 
+    $(document).on('click',"#giuscri", function(){
+		new MozActivity({
+			name: "view",
+			data: {
+				type: "url",
+				url: "http://twitter.com/giuscri"
+			}
+		});
+	});
+
     $(document).on('click',"#reload", function(){
         sendRequest();
         console.log("reloading...");

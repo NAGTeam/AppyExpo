@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="style/style.css"/>
     <link rel="stylesheet" href="style/headers.css"/>
     <link rel="stylesheet" href="style/lists.css"/>
-    <link href="style/icons/media_icons.css" rel="stylesheet" type="text/css"/>
-    <link href="style/icons/settings_icons.css" rel="stylesheet" type="text/css"/>
-    <link href="style/icons/action_icons.css" rel="stylesheet" type="text/css"/>
+    <link href="style/icons/octicons.css" rel="stylesheet" type="text/css"/>
     
     <script src='script/brick-1.0.1.js'></script>
     <script src='script/jquery-2.1.0.min.js'></script>
@@ -20,9 +18,9 @@
         <x-card selected transition='show'>
             <x-layout>
                 <header class="top-menu colorBlue" id="header">
-                    <button class="settings-icon updateBalance" id="reload"></button>
+                    <button id="reload"><span class="mega-octicon octicon-sync"></span></button>
                     <menu type="toolbar">
-                        <button class="settings-icon aboutphone" id="btn_about"></button>
+                        <button id="btn_about"><span class="mega-octicon octicon-info"></span></button>
                     </menu>
                     <img id="logo" src="style/headers/images/icons/logo.png"/>
                 </header>
@@ -35,19 +33,19 @@
         <x-card id='about'>
             <x-layout>
                 <header class="top-menu colorBlue">
-                    <button class="action-icon back" id="btn_home"></button>
+                    <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
                     <menu type="toolbar">
                         <button disabled></button>
                     </menu>
                     <h1>About</h1>
                 </header>
-                <div data-type="list">
+                <section id="about_sec">
                     <p>bla bla bla...</p>
                     <header>Version</header>
                     <p>1.0</p>
                     <header>Developers</header>
                     <p>NAG Team</p>
-                </div>
+                </section>
             </x-layout>
         </x-card>
     </x-deck>

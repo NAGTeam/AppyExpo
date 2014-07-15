@@ -2,7 +2,7 @@ body{
 	margin:0;
 }
 
-p, li {
+[data-type="list"] header, p, li {
 	margin-left: 4%;
 	margin-right: 4%;
     font-size: 0.8rem;
@@ -18,10 +18,6 @@ a {
 	color: #000;
 }
 
-#about_page{
-	padding:0 0.4rem;
-}
-
 /*Color Adjust*/
 
 .borderBlue{
@@ -32,16 +28,6 @@ a {
 	color: #2574a9;
 	background: #2574a9;
 	background-color: #2574a9;
-}
-
-.linkBlue:hover{
-	background-color: #1e8bc3;
-}
-
-.buttonBlue{
-	background-color:#59abe3;
-	border:1px solid #3498db;
-	color:white;
 }
 
 [data-type="list"] header {
@@ -68,7 +54,7 @@ a {
     z-index: 10;
 }
 
-menu[type="toolbar"] > button {
+menu[type="toolbar"] button {
     height: 80%;
     width: 80%;
 }
@@ -77,6 +63,27 @@ menu[type="toolbar"] > button {
     text-align: center;
 }
 
-[data-type="list"] > p {
-    font-size: 1.3rem;
+section > header {
+  border-bottom: 0.1rem solid #2574a9;
+  padding: 0 1.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  color: #2574a9;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#about_sec {
+    text-align: center;
+    padding: 3.5rem 0;
+    z-index: -1;
+}
+
+#about_sec > p {
+    font-size: 1rem;
 }

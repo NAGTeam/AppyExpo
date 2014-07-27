@@ -19,7 +19,7 @@ $(document).ready(function(){
 			name: "view",
 			data: {
 				type: "url",
-				url: "http://github.com/nag-motherfuckers/AppyExpo"
+				url: "http://github.com/NAGTeam/AppyExpo"
 			}
 		});
 	});

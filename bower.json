@@ -1,0 +1,15 @@
+{
+  "name": "appyExpo",
+  "main": "/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+  }
+}

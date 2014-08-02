@@ -25,7 +25,7 @@ expo2015.start = expo2015.fillFeeds = function() {
 
 expo2015.updatePage = function() {
 	var mustached_html = Mustache.to_html(expo2015.templates.giantWrap, expo2015.feeds);
-	document.querySelector('#giantWrap').innerHTML = mustached_html;
+	document.querySelector('div.giantWrap').innerHTML = mustached_html;
 };
 
 

@@ -1,4 +1,4 @@
-div.giant_wrap li {
+div.giantWrap li {
   font-family: tahoma;
   font-size: 10pt;
   margin-left: auto;
@@ -9,7 +9,7 @@ div.giant_wrap li {
   text-decoration: none;
 }
 
-div.giant_wrap a {
+div.giantWrap a {
   text-decoration: none;
   color: black;
 }

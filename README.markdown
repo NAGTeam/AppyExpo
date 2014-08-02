@@ -26,4 +26,6 @@ Kill it
 <ctrl-c>
 ```
 
+.......[technologic](https://www.youtube.com/watch?v=YtdWHFwmd2o).
+
 vim: set textwidth=72:

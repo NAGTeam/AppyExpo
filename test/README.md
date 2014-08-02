@@ -1,0 +1,3 @@
+# expo2015 testing ...
+
+`cd` to `test/` then you can python'd a server and testing.

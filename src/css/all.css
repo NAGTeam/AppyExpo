@@ -13,3 +13,7 @@ div.giantWrap a {
   text-decoration: none;
   color: black;
 }
+
+span.feedTitle, span.feedContentSnippet {
+	display: block;
+}

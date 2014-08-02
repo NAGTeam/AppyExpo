@@ -19,5 +19,9 @@
   "authors": [
     "nagz"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "~2.5.2",
+    "qunit": "~1.14.0"
+  }
 }

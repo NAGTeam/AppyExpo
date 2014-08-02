@@ -2,7 +2,7 @@
 node_modules/
 
 # Ignore downloaded lib's ...
-src/js/lib/*
+src/lib/*
 
 # Ignore temporary files ...
 **/*~,

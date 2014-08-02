@@ -2,7 +2,6 @@
 
 build:
 	@/bin/echo "[expo2015] Installing dependencies ..."
-	@npm install
 	@bower install
 	@/bin/echo ""
 

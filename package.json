@@ -1,0 +1,23 @@
+{
+  "name": "expo2015",
+  "version": "0.0.0",
+  "description": "This branch is **only** a test, and it's not by any mean a substitute of the original _AppyExpo_, which is already packaged.",
+  "main": "/src/index.html",
+  "dependencies": {
+    "jshint": "^2.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NAGTeam/AppyExpo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NAGTeam/AppyExpo/issues"
+  },
+  "homepage": "https://github.com/NAGTeam/AppyExpo"
+}

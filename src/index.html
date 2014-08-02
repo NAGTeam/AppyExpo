@@ -6,17 +6,15 @@
 
   <!-- Linking ...the heck, bitch!! -->
   <link href="css/all.css" rel="stylesheet" type="text/css"/>
-  <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="js/ajax_query.js"></script>
+  <script src="js/lib/jquery/dist/jquery.min.js"></script>
+  <script src="js/lib/mustache/mustache.js"></script>
+  <script src="js/expo2015.js"></script>
+  <script src="js/templates.js"></script>
 
 </head>
-<body>
+<body onload="expo2015.start()">
 
-  <div class="giant_wrap">
-    <ul>
-      <!-- jeez!!, content is going to be wrapped here!! -->
-    </ul>
-  </div>
+  <div id="giantWrap"></div>
 
 </body>
 </html>

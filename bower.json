@@ -1,15 +1,23 @@
 {
-  "name": "appyExpo",
-  "main": "/index.html",
+  "name": "expo2015",
+  "main": "/src/index.html",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "js/lib",
     "test",
-    "tests"
+    "tests",
+    "src/js/lib"
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-  }
+    "mustache": "~0.8.2"
+  },
+  "version": "0.0.0",
+  "homepage": "https://github.com/NAGTeam/AppyExpo",
+  "authors": [
+    "nagz"
+  ],
+  "license": "MIT"
 }

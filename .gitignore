@@ -1,2 +1,9 @@
 # Node stuff ...
 node_modules/
+
+# Ignore downloaded lib's ...
+src/js/lib/*
+
+# Ignore temporary files ...
+**/*~,
+**/*.swp

@@ -90,6 +90,7 @@ utils.status = (function() {
     document.body.removeChild(section);
     clearHideTimeout();
     section = content = null;
+      section.classList.add('hidden');
   }
 
   /*function getPath() {

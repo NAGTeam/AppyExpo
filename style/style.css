@@ -78,13 +78,13 @@ section > header {
   white-space: nowrap;
 }
 
-#about_sec {
+.sections {
     text-align: center;
     padding: 3.5rem 0;
     z-index: -1;
 }
 
-#about_sec > p {
+.sections > p {
     font-size: 1rem;
 }
 

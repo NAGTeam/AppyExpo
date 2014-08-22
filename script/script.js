@@ -54,18 +54,21 @@ $(document).ready(function(){
 		});
 	});
 
-    $(document).on('click',"#reload", function(){
-        sendRequest();
-        console.log("reloading...");
-    });
-
 	$(document).on('click','#btn_about', function() {
         goToCard(1);
     });
 
+    $(document).on('click','#btn_settings', function() {
+        goToCard(2);
+    });
+
     $(document).on('click','#btn_home', function() {
-        console.log("back to home");
         goToCard(0);
+    });
+
+   $(document).on('click', '#reload', function () {
+       console.log("clicked");
+       utils.status.show('Reloading news...');
     });
 });
 

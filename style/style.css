@@ -92,3 +92,44 @@ section > header {
 	color:#3498db;
 	text-decoration: underline;
 }
+
+/* ------------------ */
+/* Transition effects */
+/* ------------------ */
+[data-position="center"] {
+	height: 100%;
+}
+[data-position="right"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateX(100%);
+}
+[data-position="left"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateX(-100%);
+}
+[data-position="right"].current {
+	animation: rightToCurrent 0.4s forwards;
+}
+[data-position="current"].left {
+	animation: currentToLeft 0.4s forwards;
+}
+[data-position="current"].current {
+	animation: leftToCurrent 0.4s forwards;
+}
+[data-position="right"].right {
+	animation: currentToRight 0.4s forwards;
+}
+[data-position="left"].current {
+    animation: leftToCurrent 0.4s forwards;
+}
+[data-position="current"].left {
+    animation: currentToLeft 0.4s forwards;
+}

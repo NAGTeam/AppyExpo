@@ -8,80 +8,76 @@
     <link rel="stylesheet" href="style/headers.css"/>
     <link rel="stylesheet" href="style/lists.css"/>
     <link rel="stylesheet" href="style/buttons.css"/>
-    <!--<link rel="stylesheet" href="style/status.css"/>
-    <link rel="stylesheet" href="style/transitions.css"/>-->
+    <!--<link rel="stylesheet" href="style/status.css"/>-->
+    <link rel="stylesheet" href="style/transitions.css"/>
+    <link rel="stylesheet" href="style/scrolling.css"/>
     <link href="style/icons/octicons.css" rel="stylesheet" type="text/css"/>
-    
-    <script src='script/brick-1.0.1.js'></script>
+
     <script src='script/jquery-2.1.0.min.js'></script>
     <script src='script/script.js'></script>
     <!--<script src='script/status.js'></script>-->
 </head>
 <body>
-    <x-deck>
-        <x-card selected transition='show' transition-type='slide-down'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_settings"><span class="mega-octicon octicon-settings"></span></button>
-                    <menu type="toolbar">
-                        <button id="btn_about"><span class="mega-octicon octicon-info"></span></button>
-                    </menu>
-                    <img id="logo" src="style/headers/images/icons/logo.png"/>
-                </header>
-                <div data-type="list">
-                    <ul id='res_list'>
-                    </ul>
-                </div>
-            </x-layout>
-        </x-card>
-        <x-card id='about'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
-                    <menu type="toolbar">
-                        <button disabled></button>
-                    </menu>
-                    <h1>About</h1>
-                </header>
-                <section class="sections">
-                    <p>This is an Open Webapp that keeps you up to date to all news about Expo 2015.</p>
-                    <header>Version</header>
-                    <p>1.2.1</p>
-                    <header>Developers</header>
-                    <p>NAG Team:</br>
-                    <a href="#" id="aro94" class="link">@aro94</a></br>
-                    <a href="#" id="nicokant" class="link">@nicokant</a></br>
-                    Special thanks to <a href="#" id="giuscri" class="link">@giuscri</a>
-                    </p>
-                    <header>Project</header>
-                    <p>Follow <a href="#" id="git_project" class="link">the project</a> on Github!!</p>
-                    <p>Support us with a review on Mozilla Marketplace!</p>
-                </section>
-            </x-layout>
-        </x-card>
-        <x-card id='settings'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
-                    <menu type="toolbar">
-                        <button disabled></button>
-                    </menu>
-                    <h1>Settings</h1>
-                </header>
-                <section class="sections">
-                    </br>
-                    <header>Reload news</header>
-                    <p>If you had connections problems or you want to update the news feed, simply click the button below.</p>
-                    <button id="reload">Reload</button>
-                    </br>
-                    <header>Change Language</header>
-                    <p>Click one of the buttons below in order to changed the language of the news.</p>
-                    <button role="button" id="cng_en">English</button>
-                    <button role="button" id="cng_it">Italian</button>
-                    <button role="button" id="cng_fr">French</button>
-                </section>
-            </x-layout>
-        </x-card>
-    </x-deck>
+    <section role="region" id="home_screen" data-position="current">
+        <header class="fixed colorBlue top-menu">
+            <button id="btn_settings"><span class="mega-octicon octicon-settings"></span></button>
+            <menu type="toolbar">
+                <button id="btn_about"><span class="mega-octicon octicon-info"></span></button>
+            </menu>
+            <img id="logo" src="style/headers/images/icons/logo.png"/>
+        </header>
+        <article class="content scrollable header">
+            <section data-type="list">
+                <ul id='res_list'>
+                </ul>
+            </section>
+        </article>
+    </section>
+
+    <section role="region" id="about" data-position="right">
+        <header class="fixed colorBlue top-menu" id="header">
+            <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
+            <menu type="toolbar">
+                <button disabled></button>
+            </menu>
+            <h1>About</h1>
+        </header>
+        <article class="content scrollable header sections">
+            <p>This is an Open Webapp that keeps you up to date to all news about Expo 2015.</p>
+            <header>Version</header>
+            <p>1.2.5</p>
+            <header>Developers</header>
+            <p>NAG Team:</br>
+            <a href="#" id="aro94" class="link">@aro94</a></br>
+            <a href="#" id="nicokant" class="link">@nicokant</a></br>
+            Special thanks to <a href="#" id="giuscri" class="link">@giuscri</a>
+            </p>
+            <header>Project</header>
+            <p>Follow <a href="#" id="git_project" class="link">the project</a> on Github!!</p>
+            <p>Support us with a review on Mozilla Marketplace!</p>
+        </article>
+    </section>
+
+    <section role="region" id="settings" data-position="left">
+        <header class="fixed colorBlue top-menu" id="header">
+            <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
+            <menu type="toolbar">
+                <button disabled></button>
+            </menu>
+            <h1>Settings</h1>
+        </header>
+        <section class="content scrollable header sections">
+            </br>
+            <header>Reload news</header>
+            <p>If you had connections problems or you want to update the news feed, simply click the button below.</p>
+            <button id="reload">Reload</button>
+            </br>
+            <header>Change Language</header>
+            <p>Click one of the buttons below in order to changed the language of the news.</p>
+            <button role="button" id="cng_en">English</button>
+            <button role="button" id="cng_it">Italian</button>
+            <button role="button" id="cng_fr">French</button>
+        </section>
+    </section>
 </body>
 </html>

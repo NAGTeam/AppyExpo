@@ -55,47 +55,54 @@ $(document).ready(function(){
 		});
 	});
 
-	$(document).on('click','#btn_about', function() {
-        goToCard(1);
+    $('#btn_about').click(function() {
+		$('#about').attr('class', 'current');
+        $('#home_screen').hide();
+		//$('[data-position="current"]').attr('class', 'left');
+	});
+
+    $('#btn_settings').click(function() {
+		$('#settings').attr('class', 'current');
+        $('#home_screen').hide();
+		//$('[data-position="current"]').attr('class', 'right');
+	});
+
+    $('#btn_home').click(function() {
+        $('#home_screen').show();
+		//$('[data-position="current"]').attr('class', 'current');
+		$('[data-position="right"]').attr('class', 'right');
+		$('[data-position="left"]').attr('class', 'left');
+	});
+
+    $(document).on('click', '#reload', function () {
+        $('#res_list').empty();
+        utils.status.show('Reloading news...');
+        //alert('Reloading news...');
+        sendRequest();
     });
 
-    $(document).on('click','#btn_settings', function() {
-        goToCard(2);
+    $(document).on('click', '#cng_en', function () {
+        $('#res_list').empty();
+        utils.status.show('News are now displayed in English');
+        //alert('News are now displayed in English');
+        url='http://www.expo2015.org/en/rss.xml';
+        sendRequest();
     });
 
-    $(document).on('click','#btn_home', function() {
-        goToCard(0);
+    $(document).on('click', '#cng_it', function () {
+        $('#res_list').empty();
+        utils.status.show('News are now displayed in Italian');
+        //alert('News are now displayed in Italian');
+        url='http://www.expo2015.org/it/rss.xml';
+        sendRequest();
     });
 
-   $(document).on('click', '#reload', function () {
-       $('#res_list').empty();
-       //utils.status.show('Reloading news...');
-       alert('Reloading news...');
-       sendRequest();
-    });
-
-   $(document).on('click', '#cng_en', function () {
-       $('#res_list').empty();
-       //utils.status.show('News displayed in English');
-       alert('News are now displayed in English');
-       url='http://www.expo2015.org/en/rss.xml';
-       sendRequest();
-    });
-
-   $(document).on('click', '#cng_it', function () {
-       $('#res_list').empty();
-       //utils.status.show('News displayed in Italian');
-       alert('News are now displayed in Italian');
-       url='http://www.expo2015.org/it/rss.xml';
-       sendRequest();
-    });
-
-   $(document).on('click', '#cng_fr', function () {
-       $('#res_list').empty();
-       //utils.status.show('News displayed in French');
-       alert('News are now displayed in French');
-       url='http://www.expo2015.org/fr/rss.xml';
-       sendRequest();
+    $(document).on('click', '#cng_fr', function () {
+        $('#res_list').empty();
+        utils.status.show('News are now displayed in French');
+        //alert('News are now displayed in French');
+        url='http://www.expo2015.org/fr/rss.xml';
+        sendRequest();
     });
 });
 
@@ -126,8 +133,4 @@ function sendRequest(){
         }
     };
     request.send();
-}
-
-function goToCard(cardNum){
-	document.querySelector('x-deck').showCard(cardNum);
 }

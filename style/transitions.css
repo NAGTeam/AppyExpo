@@ -1,4 +1,4 @@
-/* Task switching
+ Task switching
 @keyframes taskCurrentZoomOut {
   0%   { transform: scale(1.0); }
   100% { transform: scale(0.8); }
@@ -132,7 +132,7 @@
          z-index: 14; }
 }
 
-/* Overlay
+/* Overlay */
 @keyframes hideOverlay {
   0%   { background-color: rgba(0,0,0,0.7); }
   100% { background-color: rgba(0,0,0,0); }
@@ -160,7 +160,7 @@
   100% { background: rgba(0,0,0,0.7); }
 }
 
-/* Open/close apps
+/* Open/close apps */
 @keyframes openApp {
   0%   { transform: scale(0.1);
        opacity: 0; }
@@ -206,7 +206,7 @@
 }
 
 
-/* App invokes app
+/* App invokes app */
 @keyframes invokingApp {
   0%   { transform: scale(1.0); }
   50%  { transform: scale(0.8) translateX(0);
@@ -237,7 +237,7 @@
          z-index: 12; }
 }
 
-/* Go deeper
+/* Go deeper */
 @keyframes rightToCurrent {
   0%   { transform: translateX(100%); }
   100% { transform: translateX(0); }
@@ -292,7 +292,7 @@
   100% { -webkit-transform: translateX(0); }
 }
 
-/* Make call
+/* Make call */
 @keyframes moveLeftOut {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
@@ -407,7 +407,7 @@
        opacity: 0; }
 }
 
-/* Generic
+/* Generic */
 @keyframes fadeIn {
   0%   { opacity: 0; }
   100% { opacity: 1; }

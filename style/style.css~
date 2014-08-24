@@ -96,3 +96,7 @@ section > header {
 .hidden{
     display:none;
 }
+
+.show{
+    display:static;
+}

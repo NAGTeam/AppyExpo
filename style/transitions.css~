@@ -452,7 +452,6 @@ section[role="status"] {
 }
 
 section[role="status"].onviewport {
-  display:static;
   animation: show .3s forwards;
   -webkit-animation: show .3s forwards;
 }

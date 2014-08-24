@@ -16,10 +16,10 @@ section[role="status"] {
 section[role="status"] p {
   font-size: 1rem;
   font-weight: normal;
-  line-height: 2.2rem;
-  margin: 1rem 3rem;
+  line-height: 1rem;
+  margin: 2rem 3rem;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 section[role="status"] p strong {

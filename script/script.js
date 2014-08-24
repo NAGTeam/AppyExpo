@@ -69,31 +69,31 @@ $(document).ready(function(){
 
    $(document).on('click', '#reload', function () {
        $('#res_list').empty();
-       //utils.status.show('Reloading news...');
-       alert('Reloading news...');
+       utils.status.show('Reloading news...');
+       //alert('Reloading news...');
        sendRequest();
     });
 
    $(document).on('click', '#cng_en', function () {
        $('#res_list').empty();
-       //utils.status.show('News displayed in English');
-       alert('News are now displayed in English');
+       utils.status.show('News displayed in English');
+       //alert('News are now displayed in English');
        url='http://www.expo2015.org/en/rss.xml';
        sendRequest();
     });
 
    $(document).on('click', '#cng_it', function () {
        $('#res_list').empty();
-       //utils.status.show('News displayed in Italian');
-       alert('News are now displayed in Italian');
+       utils.status.show('News displayed in Italian');
+       //alert('News are now displayed in Italian');
        url='http://www.expo2015.org/it/rss.xml';
        sendRequest();
     });
 
    $(document).on('click', '#cng_fr', function () {
        $('#res_list').empty();
-       //utils.status.show('News displayed in French');
-       alert('News are now displayed in French');
+       utils.status.show('News displayed in French');
+       //alert('News are now displayed in French');
        url='http://www.expo2015.org/fr/rss.xml';
        sendRequest();
     });

@@ -71,8 +71,6 @@ menu[type="toolbar"] button {
 [data-type="list"] {
     position: relative;
     text-align: center;
-    height: calc(100% - 5rem);
-    top: 5rem;
 }
 
 section > header {

@@ -1,86 +1,110 @@
-
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link type='text/css' href='style/brick-1.0.1.css' rel="stylesheet"/>
-    <link rel="stylesheet" href="style/style.css"/>
-    <link rel="stylesheet" href="style/headers.css"/>
-    <link rel="stylesheet" href="style/lists.css"/>
-    <link rel="stylesheet" href="style/buttons.css"/>
-    <link rel="stylesheet" href="style/status.css"/>
-    <link href="style/icons/octicons.css" rel="stylesheet" type="text/css"/>
+    <meta name="theme-color" content="#2574a9">
     
-    <script src='script/brick-1.0.1.js'></script>
-    <script src='script/jquery-2.1.1.min.js'></script>
-    <script src='script/script.js'></script>
-    <script src='script/status.js'></script>
+	<!-- Some Gaia components -->
+	<link href="css/gaia/headers.css" rel="stylesheet" />
+	<link href="css/gaia/lists.css" rel="stylesheet" />
+	<link href="css/gaia/layout.css" rel="stylesheet" />
+	<link href="css/gaia/scrolling.css" rel="stylesheet" />
+	<link href="css/gaia/status.css" rel="stylesheet" />
+	<link href="css/gaia/buttons.css" rel="stylesheet" />
+	
+	<!-- Some others stylish stuff -->
+	<link href="css/style.css" rel="stylesheet" />
+	<link href="css/util.css" rel="stylesheet" />
+	<link href="css/transitions.css" rel="stylesheet" />
+	
+	<!-- Using gaia-icons/gaia-icons.css instead of gaia/icons.css -->
+	<link href="css/gaia-icons/gaia-icons.css" rel="stylesheet" />
+    
+    <script src='js/jquery-2.1.1.min.js'></script>
+    <script src='js/script.js'></script>
+    <script src='js/status.js'></script>
 </head>
-<body>
-    <x-deck>
-        <x-card selected transition='show' transition-type='slide-down' id='home'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_settings"><span class="mega-octicon octicon-settings"></span></button>
-                    <menu type="toolbar">
-                        <button id="btn_about"><span class="mega-octicon octicon-info"></span></button>
-                    </menu>
-                    <img id="logo" class="valign" src="style/icons/logo.png"/>
-                </header>
-                <div data-type="list">
-                    <ul id='res_list'>
-                    </ul>
-                </div>
-            </x-layout>
-        </x-card>
-        <x-card id='about'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
-                    <menu type="toolbar">
-                        <button disabled></button>
-                    </menu>
-                    <h1>About</h1>
-                </header>
-                <section class="sections">
-                    <p>AppyEXPO is an Open Webapp that keeps you up to date to all news about Expo 2015.</p>
-                    <header>Version</header>
-                    <p>1.3</p>
-                    <header>Developers</header>
-                    <p>NAG Team:</br>
-                    <a href="#" id="aro94" class="link">@aro94</a></br>
-                    <a href="#" id="nicokant" class="link">@nicokant</a></br>
-                    Special thanks to <a href="#" id="giuscri" class="link">@giuscri</a>
-                    </p>
-                    <header>Project</header>
-                    <p>Follow <a href="#" id="git_project" class="link">the project</a> on Github!!</p>
-                    <p>Support us with a review on Mozilla Marketplace!</p>
-                </section>
-            </x-layout>
-        </x-card>
-        <x-card id='settings'>
-            <x-layout>
-                <header class="top-menu colorBlue" id="header">
-                    <button id="btn_home"><span class="mega-octicon octicon-chevron-left"></span></button>
-                    <menu type="toolbar">
-                        <button disabled></button>
-                    </menu>
-                    <h1>Settings</h1>
-                </header>
-                <section class="sections">
-                    </br>
-                    <header>Reload news</header>
-                    <p>If you had connections problems or you want to update the news feed, simply click the button below.</p>
-                    <button id="reload">Reload</button>
-                    </br>
-                    <header>Change Language</header>
-                    <p>Click one of the buttons below in order to changed the language of the news.</p>
-                    <button role="button" id="cng_en">English</button>
-                    <button role="button" id="cng_it">Italian</button>
-                    <button role="button" id="cng_fr">French</button>
-                </section>
-            </x-layout>
-        </x-card>
-    </x-deck>
+<body role='application'>
+	<section role='region' id='home' data-position="current">
+		<header class='fixed'>
+			<button id='btn_settings' data-icon='settings'></button>
+			<menu type='toolbar'>
+				<button id='btn_about' data-icon='info'></button>
+			</menu>
+			<img id="logo" class="valign" src="/icons/logo.png"/>
+		</header>
+		<article class="content scrollable header">
+			<section data-type='list'>
+				<ul id='res_list'>
+					<!-- Scraped text here -->
+				</ul>
+			</section>
+		</article>
+	</section>
+	<section role='region' id='article-page' data-position='right'>
+		<header class='fixed'>
+			<button id='btn_home' data-icon='back'></button>
+			<!--menu type='toolbar>
+				<button></button>
+			</menu-->
+			<h1 id='title'></h1>
+		</header>
+		<article class="content scrollable header">
+			<div id='res_article'>
+				<!-- Scraped text here -->
+			</div>
+			<span id='url' class='hidden'>
+				<!-- URL here -->
+			</span>
+		</article>
+	</section>
+    <section role='region' id='about'>
+    	<header class='fixed'>
+		    <button id="btn_close_about" data-icon='close'></button>
+		    <menu type="toolbar">
+		    	<button></button>
+		    </menu>
+		    <h1>About</h1>
+    	</header>
+    	<article class="content scrollable header">
+    		<div>
+				<p>AppyEXPO is an Open Webapp that keeps you up to date to all news about Expo 2015.</p>
+				<header>Version</header>
+				<p>1.4</p>
+				<header>Developers</header>
+				<p>NAG Team:</br>
+				<a href="#" id="aro94" class="link">@aro94</a></br>
+				<a href="#" id="nicokant" class="link">@nicokant</a></br>
+				Special thanks to <a href="#" id="giuscri" class="link">@giuscri</a>
+				</p>
+				<header>Project</header>
+				<p>Follow <a href="#" id="git_project" class="link">the project</a> on Github!!</p>
+				<p>Support us with a review on Mozilla Marketplace!</p>
+			</div>
+    	</article>
+    </section>
+    <section role='region' id='settings'>
+    	<header class='fixed' id='header'>
+    		<button id="btn_close_settings" data-icon='close'></button>
+    		<menu type='toolbar'>
+    			<button></button>
+    		</menu>
+    		<h1>Settings</h1>
+    	</header>
+    	<article class="content scrollable header">
+    		<div>
+				<header>Reload news</header>
+				<p>If you had connections problems or you want to update the news feed, simply click the button below.</p>
+				<button id="reload">Reload</button>
+				</br>
+				<header>Change Language</header>
+				<p>Click one of the buttons below in order to changed the language of the news.</p>
+				<button role="button" id="cng_en">English</button>
+				<button role="button" id="cng_it">Italian</button>
+				<button role="button" id="cng_fr">French</button>
+			</div>
+    	</article>
+    </section>
 </body>
 </html>

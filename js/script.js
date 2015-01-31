@@ -150,13 +150,24 @@ function fetchArticle(url) {
 	
 	xhr.onreadystatechange = function(){
         if(xhr.status === 200 && xhr.readyState === 4){
+        	console.log($(xhr.response));
         	title = $(xhr.response)[3].text;
-        	if(url.match(/org\/(.*)\//)[0] == "org/cs/Expo/en/")
-        		text = $(xhr.response)[143].childNodes[1].childNodes[1].firstElementChild.innerHTML;
-        	else if(url.match(/org\/(.*)\//)[0] == "org/cs/Expo/it/")
-        		text = $(xhr.response)[139].childNodes[1].childNodes[1].firstElementChild.innerHTML;
-        	else
-        		text = $(xhr.response)[149].childNodes[1].childNodes[1].firstElementChild.innerHTML; 
+        	if(url.match(/org\/(.*)\//)[0] == "org/cs/Expo/en/") {
+        		if ($(xhr.response)[143].className == "expoInside box-type-1")
+        			text = $(xhr.response)[143].childNodes[1].childNodes[1].firstElementChild.innerHTML;
+        		else
+        			text = $(xhr.response)[149].childNodes[1].childNodes[1].firstElementChild.innerHTML;
+        	} else if(url.match(/org\/(.*)\//)[0] == "org/cs/Expo/it/")
+        		if($(xhr.response)[139].className == "expoInside box-type-1")
+        			text = $(xhr.response)[139].childNodes[1].childNodes[1].firstElementChild.innerHTML;
+        		else
+        			text = $(xhr.response)[143].childNodes[1].childNodes[1].firstElementChild.innerHTML;
+        	else {
+        		if($(xhr.response)[149].className == "expoInside box-type-1")
+        			text = $(xhr.response)[149].childNodes[1].childNodes[1].firstElementChild.innerHTML; 
+        		else
+        			text = $(xhr.response)[143].childNodes[1].childNodes[1].firstElementChild.innerHTML;
+        	}
         	$('#title').append(title);    	
 			$('#res_article').append(text);
 		}

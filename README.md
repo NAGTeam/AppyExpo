@@ -17,7 +17,9 @@ Restyling
 All Building Blocks   
 Tinted status bar  
 Links now opens in-app   
-Bug Fixes
+Bug Fixes   
+- __v1.4.1__   
+Corrected article-scraping
 - __[WIP]v1.5__   
 Push notifications
 
